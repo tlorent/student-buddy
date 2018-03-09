@@ -1,0 +1,23 @@
+{
+  "name": "student-buddy",
+  "version": "1.0.0",
+  "description": "A remake of Brad Schiff's 'Git A Web Developer Job' Udemy course website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlorent/student-buddy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tlorent/student-buddy/issues"
+  },
+  "homepage": "https://github.com/tlorent/student-buddy#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0"
+  }
+}
