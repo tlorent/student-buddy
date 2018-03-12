@@ -24,45 +24,58 @@
     </header>
 
     <div class="large-hero">
-      <img src="assets/images/hero--large.jpg" alt="Male overlooking a city street, hat on">
+      <picture>
+        <source srcset="assets/images/hero--large.jpg" media="(min-width: 1380px)">
+        <source srcset="assets/images/hero--medium.jpg" media="(min-width: 990px)">
+        <source srcset="assets/images/hero--small.jpg" media="(min-width: 640px)">
+        <img src="assets/images/hero--smaller.jpg" alt="Young male student overlooking city street." class="large-hero__image">
+      </picture>
       <div class="large-hero__text-content">
-        <h1 class="large-hero__title">Your Student Buddy.</h1>
-        <h2 class="large-hero__subtitle">For a warm welcome.</h2>
-        <p class="large-hero__description">We provide the best introduction to your new student life abroad.</p>
-        <p><a href="#" class="btn btn--orange btn--large">Get Started Today</a></p>
+        <div class="wrapper">
+          <h1 class="large-hero__title">Your Student Buddy.</h1>
+          <h2 class="large-hero__subtitle">For a warm welcome.</h2>
+          <p class="large-hero__description">We provide the best introduction to your new student life abroad.</p>
+          <p><a href="#" class="btn btn--orange btn--large">Get Started Today</a></p>
+        </div>
       </div>
     </div>
 
-    <div id="about-us">
-      <h2>We once moved to a new university far, far away.</h2>
-      <h3>Ever since, we&rsquo;ve been working to make the student introduction time better for everyone.</h3>
-      <img src="assets/images/about-us--smiles.jpg" alt="Three female student friends cheering">
-      <img src="assets/images/about-us--friends.jpg" alt="Student friends standing beside each other">
-      <h2>Here&rsquo;s a little bit about ourselves.</h2>
-      <p>So you&rsquo;re moving to a new country to study abroad? Congratulations! You&rsquo;ve just made an important and life-changing first step. But moving abroad can be a daunting task: you need to make new friends, find a place to live and of course find out where the best bars, clubs, and cinema&rsquo;s are. But no worries, <strong>we are here to help you</strong>!</p>
-      <p>At Student Buddy, we are specialised in providing the best introduction to your new student life. Your will pair up with local students, called ‘buddies’, who will guide you through the city. How? With fun activities all across town, a handbook to help you get settled, an entertainment tour, and lots more.</p>
-      <p>Our buddy system will make sure that you don&rsquo;t feel left out when you arrive in a new country, full of questions and feeling lost in translation. After all, we&rsquo;ve been there before and know what we need to do to make you <strong>feel welcome</strong>!</p>
+    <div id="about-us" class="page-section">
+      <div class="wrapper">
+        <h2 class="headline headline--centered headline--light headline--b-margin-small">We once moved to a new university <strong>far, far away.</strong></h2>
+        <h3 class="headline headline--centered headline--orange headline--small headline--narrow headline--light headline--b-margin-large">Ever since, we&rsquo;ve been working to make the student introduction time <strong>better for everyone.</strong></h3>
+        <div class="wrapper wrapper--medium">
+          <img src="assets/images/about-us--smiles.jpg" alt="Three female student friends cheering">
+        </div>
+        <img src="assets/images/about-us--friends.jpg" alt="Student friends standing beside each other">
+        <h2 class="headline headline--centered">Here&rsquo;s a little bit about ourselves.</h2>
+        <p>So you&rsquo;re moving to a new country to study abroad? Congratulations! You&rsquo;ve just made an important and life-changing first step. But moving abroad can be a daunting task: you need to make new friends, find a place to live and of course find out where the best bars, clubs, and cinema&rsquo;s are. But no worries, <strong>we are here to help you</strong>!</p>
+        <p>At Student Buddy, we are specialised in providing the best introduction to your new student life. Your will pair up with local students, called ‘buddies’, who will guide you through the city. How? With fun activities all across town, a handbook to help you get settled, an entertainment tour, and lots more.</p>
+        <p>Our buddy system will make sure that you don&rsquo;t feel left out when you arrive in a new country, full of questions and feeling lost in translation. After all, we&rsquo;ve been there before and know what we need to do to make you <strong>feel welcome</strong>!</p>
+      </div>
     </div>
 
-    <div id="features">
-      <img src="" alt="">
-      <h2>Our Features</h2>
+    <div id="features" class="page-section page-section--blue">
+      <div class="wrapper">
+        <img src="" alt="">
+        <h2>Our Features</h2>
 
-      <img src="" alt="">
-      <h3>Local Guides</h3>
-      <p>We pair everyone with an excited local student who can&rsquo;t wait to show you around. These guys and girls know everything there is to know about the city, so let&rsquo;s meet up!</p>
+        <img src="" alt="">
+        <h3>Local Guides</h3>
+        <p>We pair everyone with an excited local student who can&rsquo;t wait to show you around. These guys and girls know everything there is to know about the city, so let&rsquo;s meet up!</p>
 
-      <img src="" alt="">
-      <h3>Handbook</h3>
-      <p>Everyone receives a handbook full of tips and tricks, such as the best places to go out, watch a movie, or shop. You will find everything you need in here!</p>
+        <img src="" alt="">
+        <h3>Handbook</h3>
+        <p>Everyone receives a handbook full of tips and tricks, such as the best places to go out, where to watch a movie, or shop. You will find everything you need in here!</p>
 
-      <img src="" alt="">
-      <h3>App</h3>
-      <p>In our Student Buddy app you can get in touch with your buddy, meet other students from abroad and get regular updates on what&rsquo;s happening in town.</p>
+        <img src="" alt="">
+        <h3>App</h3>
+        <p>In our Student Buddy app you can get in touch with your buddy, meet other students from abroad and get regular updates on what&rsquo;s happening in town.</p>
 
-      <img src="" alt="">
-      <h3>Goodie Bag</h3>
-      <p>Of course you can&rsquo;t be welcomed empty handed, so we provide you with a great goodie bag, a survival kit. It includes our handbook, and some more mystery presents essential for your introduction time!</p>
+        <img src="" alt="">
+        <h3>Goodie Bag</h3>
+        <p>Of course you can&rsquo;t be welcomed empty handed, so we provide you with a great goodie bag, a survival kit. It includes our handbook, and some more mystery presents essential for your introduction time!</p>
+      </div>
     </div>
 
     <div id="testimonials">
