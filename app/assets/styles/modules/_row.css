@@ -10,12 +10,12 @@
     margin-right: -65px;
   }
 
-  &--gutters-small {
-    margin-right: -45px;
-  }
-
   &--gutters-large {
     margin-right: -100px;
+  }
+
+  &--gutters-small {
+    margin-right: -45px;
   }
 
   /* Select all direct descendants of a gutters element that use a div tag*/
@@ -23,12 +23,12 @@
     padding-right: 65px;
   }
 
-  &--gutters-small > div {
-    padding-right: 45px;
-  }
-
   &--gutters-large > div {
     padding-right: 100px;
+  }
+
+  &--gutters-small > div {
+    padding-right: 45px;
   }
 
   &__b-margin-until-medium {
@@ -63,6 +63,7 @@
     &__medium-8--smaller {
       width: 63%;
     }
+
   }
 
   @mixin atLarge {
@@ -93,9 +94,10 @@
     &__large-8--smaller {
       width: 63%;
     }
+
   }
 
-  /* Begin equal height rules */
+  /* Begin Equal Height Rules */
   &--equal-height-at-medium {
     @mixin atMedium {
       display: flex;
@@ -105,6 +107,7 @@
       float: none;
       display: flex;
     }
+
   }
 
   &--equal-height-at-large {
@@ -116,6 +119,7 @@
       float: none;
       display: flex;
     }
+
   }
 
 }
