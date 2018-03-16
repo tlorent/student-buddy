@@ -561,12 +561,13 @@ a {
   }
 
 .wrapper {
+  overflow: hidden;
   padding-left: 18px;
   padding-right: 18px;
   max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+
 }
 
 .wrapper--medium {
@@ -605,7 +606,6 @@ a {
   }
 
 .wrapper--b-margin {
-
     margin-bottom: 1rem;
   }
 
@@ -740,12 +740,12 @@ a {
     margin-right: -65px;
   }
 
-.row--gutters-small {
-    margin-right: -45px;
-  }
-
 .row--gutters-large {
     margin-right: -100px;
+  }
+
+.row--gutters-small {
+    margin-right: -45px;
   }
 
 /* Select all direct descendants of a gutters element that use a div tag*/
@@ -754,12 +754,12 @@ a {
     padding-right: 65px;
   }
 
-.row--gutters-small > div {
-    padding-right: 45px;
-  }
-
 .row--gutters-large > div {
     padding-right: 100px;
+  }
+
+.row--gutters-small > div {
+    padding-right: 45px;
   }
 
 .row__b-margin-until-medium {
@@ -826,7 +826,7 @@ a {
     }
   }
 
-/* Begin equal height rules */
+/* Begin Equal Height Rules */
 
 @media (min-width: 800px) {
 
@@ -834,6 +834,7 @@ a {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex
+
   }
   }
 
@@ -850,6 +851,7 @@ a {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex
+
   }
   }
 
@@ -956,7 +958,7 @@ a {
   }
 
 .testimonial {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, .8);
   padding: 0 18px 1px 18px;
   margin-bottom: 98px;
 }
@@ -964,8 +966,8 @@ a {
 @media (min-width: 1200px) {
 
 .testimonial {
-    padding: 0 1.8125rem 1px 1.8125rem;
-    margin-bottom: 0
+    margin-bottom: 0;
+    padding: 0 1.8125rem 1px 1.8125rem
 }
   }
 
@@ -974,12 +976,12 @@ a {
   }
 
 .testimonial__photo {
-    border-radius: 50%;
+    border-radius: 80px;
     overflow: hidden;
     width: 160px;
     height: 160px;
     margin: 0 auto -80px auto;
-    border: 6px solid rgba(255, 255, 255, 0.8);
+    border: 6px solid rgba(255, 255, 255, .8);
 
     /* Pull the image up half of its height */
     position: relative;
@@ -990,7 +992,7 @@ a {
     color: #2f5572;
     text-align: center;
     font-size: 1.5rem;
-    /* font-weight: 500; */
+    font-weight: 500;
     margin: 0;
   }
 
@@ -999,5 +1001,40 @@ a {
     text-align: center;
     font-weight: 400;
     font-size: 0.9375rem;
-    margin: 0.25rem 0 1rem 0;
+    margin: .25rem 0 1rem 0;
+  }
+
+.site-footer {
+	background-color: #2f5572;
+	color: #fff;
+	padding: 0.5rem 0;
+	text-align: center;
+}
+
+.site-footer__text {
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 200;
+	}
+
+@media (min-width: 800px) {
+
+.site-footer__text {
+			display: inline;
+			margin-bottom: 0
+	}
+  }
+
+.site-footer__rights {
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 200;
+	}
+
+@media (min-width: 800px) {
+
+.site-footer__rights {
+			display: inline;
+			margin-right: 1.4rem
+	}
   }
