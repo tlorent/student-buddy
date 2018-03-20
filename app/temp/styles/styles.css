@@ -1076,13 +1076,60 @@ a {
 
 .site-header__menu-icon {
 		width: 20px;
-		height: 20px;
-		background-color: #fff;
+		height: 19px;
 		position: absolute;
 		top: 10px;
 		right: 10px;
 		z-index: 10;
 	}
+
+.site-header__menu-icon::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+
+			/* Make the top left corner of the element the pivot point */
+			-webkit-transform-origin: 0 0;
+			        transform-origin: 0 0;
+			-webkit-transition: -webkit-transform 0.3s ease-out;
+			transition: -webkit-transform 0.3s ease-out;
+			transition: transform 0.3s ease-out;
+			transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		}
+
+.site-header__menu-icon__middle {
+			content: '';
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+			-webkit-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+
+.site-header__menu-icon::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+
+			/* Make the bottom left corner the pivot point of the element */
+			-webkit-transform-origin: 0 100%;
+			        transform-origin: 0 100%;
+			-webkit-transition: -webkit-transform 0.3s ease-out;
+			transition: -webkit-transform 0.3s ease-out;
+			transition: transform 0.3s ease-out;
+			transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		}
 
 @media (min-width: 800px) {
 
@@ -1090,6 +1137,26 @@ a {
 			display: none
 	}
   }
+
+.site-header__menu-icon--close-x::before {
+			/* Rotate the element 45 degrees clockwise and increase its width */
+			-webkit-transform: rotate(45deg) scaleX(1.25);
+			        transform: rotate(45deg) scaleX(1.25);
+		}
+
+.site-header__menu-icon--close-x .site-header__menu-icon__middle {
+			opacity: 0;
+
+			/* shrink down its width from 100% to 0 */
+			-webkit-transform: scaleX(0);
+			        transform: scaleX(0);
+		}
+
+.site-header__menu-icon--close-x::after {
+			/* translateY to adjust the vertical positioning of the element */
+			-webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+			        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+		}
 
 .site-header__menu-content {
 		opacity: 0;
