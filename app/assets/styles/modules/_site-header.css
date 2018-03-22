@@ -10,7 +10,12 @@
 	}
 
 	@mixin atMedium {
+		position: fixed;
 		background-color: rgba($mainBlue, 0.3);
+
+		&--dark {
+			background-color: rgba(23, 51, 72, 0.85);
+		}
 	}
 
 	&__btn-container {

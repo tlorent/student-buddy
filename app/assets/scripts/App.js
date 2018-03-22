@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnScroll';
+import StickyHeader from './modules/StickyHeader';
 
 var mobileMenu = new MobileMenu();
 
@@ -9,3 +10,5 @@ The first argument is which DOM elements should be selected to use the ROS class
 */
 new RevealOnScroll($('.feature-item'), '85%');
 new RevealOnScroll($('.testimonial'), '60%');
+
+var stickyHeader = new StickyHeader();
