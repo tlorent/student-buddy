@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyHeader {
 	constructor() {
+		this.lazyImages = $('.lazyload');
 		// Grab any elements with a class of site-header
 		// and create a collection in this.siteHeader
 		this.siteHeader = $('.site-header');
@@ -14,6 +15,15 @@ class StickyHeader {
 		this.createHeaderWaypoint();
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
+		this.refreshWaypoints();
+	}
+
+	refreshWaypoints() {
+		// First argument is the event you want to be on the lookout for
+		this.lazyImages.on('load', function() {
+			// Refreshes all waypoints in the browser's memory (including the ROS.js file)
+			Waypoint.refreshAll();
+		});
 	}
 
 	addSmoothScrolling() {

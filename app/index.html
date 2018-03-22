@@ -9,6 +9,7 @@
     <meta name="description" content="We provide the best introduction to your new student life abroad.">
 
     <link rel="stylesheet" href="./temp/styles/styles.css">
+    <script src="/temp/scripts/Vendor.js" type="text/javascript"></script>
   </head>
   <body>
 
@@ -57,12 +58,12 @@
         <h3 class="headline headline--centered headline--orange headline--small headline--narrow headline--light headline--b-margin-large">Ever since, we&rsquo;ve been working to make the student introduction time <strong>better for everyone.</strong></h3>
 
         <div class="wrapper wrapper--medium wrapper--b-margin">
-          <img src="assets/images/about-us--smiles.jpg" alt="Three female student friends cheering">
+          <img class="lazyload" data-srcset="assets/images/about-us--smiles.jpg" alt="Three female student friends cheering">
         </div>
 
         <div class="row row--gutters">
           <div class="row__medium-4 row__medium-4--larger row__b-margin-until-medium">
-            <img src="assets/images/about-us--friends.jpg" alt="Student friends standing beside each other">
+            <img class="lazyload" data-srcset="assets/images/about-us--friends.jpg" alt="Student friends standing beside each other">
           </div>
           <div class="row__medium-8 row__medium-8--smaller">
             <div class="generic-content-container">
@@ -114,7 +115,7 @@
       </div>
     </div>
 
-    <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials" data-matching-link="#testimonials-link">
+    <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials lazyload" data-matching-link="#testimonials-link">
       <div class="wrapper wrapper--no-padding-until-large">
         <h2 class="section-title section-title--blue"><img src="./assets/images/icons/comment.svg" alt="" class="section-title__icon">Real <strong>Testimonials</strong></h2>
 
@@ -122,7 +123,7 @@
           <div class="row__large-4">
             <div class="testimonial">
               <div class="testimonial__photo">
-                <img src="./assets/images/testimonial-jane.jpg" alt="">
+                <img class="lazyload" sizes="160px" data-srcset="./assets/images/testimonial-jane.jpg 160w" alt="Jane Doe">
               </div>
               <h3 class="testimonial__title">Tracy Arleen</h3>
               <h4 class="testimonial__subtitle">Ohio, USA</h4>
@@ -132,7 +133,7 @@
           <div class="row__large-4">
             <div class="testimonial">
               <div class="testimonial__photo">
-                <img src="./assets/images/testimonial-jane.jpg" alt="">
+                <img class="lazyload" sizes="160px" data-srcset="./assets/images/testimonial-jane.jpg 160w" alt="Jane Doe">
               </div>
               <h3 class="testimonial__title">Avinash David</h3>
               <h4 class="testimonial__subtitle">Mumbai, India</h4>
@@ -142,7 +143,7 @@
           <div class="row__large-4">
             <div class="testimonial testimonial--last">
               <div class="testimonial__photo">
-                <img src="./assets/images/testimonial-jane.jpg" alt="">
+                <img class="lazyload" sizes="160px" data-srcset="./assets/images/testimonial-jane.jpg 160w" alt="Jane Doe">
               </div>
               <h3 class="testimonial__title">Evan Smith</h3>
               <h4 class="testimonial__subtitle">London, England</h4>

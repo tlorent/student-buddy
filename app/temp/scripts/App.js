@@ -11295,6 +11295,7 @@ var StickyHeader = function () {
 	function StickyHeader() {
 		_classCallCheck(this, StickyHeader);
 
+		this.lazyImages = (0, _jquery2.default)('.lazyload');
 		// Grab any elements with a class of site-header
 		// and create a collection in this.siteHeader
 		this.siteHeader = (0, _jquery2.default)('.site-header');
@@ -11305,9 +11306,19 @@ var StickyHeader = function () {
 		this.createHeaderWaypoint();
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
+		this.refreshWaypoints();
 	}
 
 	_createClass(StickyHeader, [{
+		key: 'refreshWaypoints',
+		value: function refreshWaypoints() {
+			// First argument is the event you want to be on the lookout for
+			this.lazyImages.on('load', function () {
+				// Refreshes all waypoints in the browser's memory (including the ROS.js file)
+				Waypoint.refreshAll();
+			});
+		}
+	}, {
 		key: 'addSmoothScrolling',
 		value: function addSmoothScrolling() {
 			this.headerLinks.smoothScroll({ speed: 1300 });
