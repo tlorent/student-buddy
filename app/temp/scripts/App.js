@@ -11807,6 +11807,18 @@ var Modal = function () {
 			// clicking the x close modal button
 			this.closeModalButton.click(this.closeModal.bind(this));
 			// pushes the escape key
+			(0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+		}
+	}, {
+		key: 'keyPressHandler',
+		value: function keyPressHandler(e) {
+			// Initialize the key from event.key if it has a value that is not undefined. If it is undefined, look for keyCode.
+			var key = e.key || e.keyCode;
+
+			//Check for the new KeyboardEvent.code for browsers that use this new attribute or the old keyCode for browsers that do not yet support key or code.
+			if (key === 'Escape' || key === 'Esc' || key === 27) {
+				this.closeModal();
+			}
 		}
 	}, {
 		key: 'openModal',
