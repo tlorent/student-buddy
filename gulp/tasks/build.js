@@ -33,44 +33,66 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
 		'!./app/assets/styles/**',
 		'!./app/assets/scripts/**',
 		'!./app/temp',
-		'./app/temp/**'
+		'!./app/temp/**'
 	];
 
 	return gulp.src(pathsToCopy).pipe(gulp.dest('./docs'));
 });
 
 gulp.task('optimizeImages', ['deleteDistFolder'], function() {
-	return (
-		gulp
-			// Go into any subfolder of images and grab any file(s).
-			// The exclamation point means you can exclude any files that are incldued within the first path.
-			.src('./app/assets/images/**/*')
-			.pipe(
-				imagemin({
-					progressive: true,
-					interlaced: true,
-					multipass: true
-				})
-			)
-			.pipe(gulp.dest('./docs/assets/images'))
-	);
+	return gulp
+		.src(['./app/assets/images/**/*'])
+		.pipe(
+			imagemin({
+				progressive: true,
+				interlaced: true,
+				multipass: true
+			})
+		)
+		.pipe(gulp.dest('./docs/assets/images'));
 });
 
 gulp.task('useminTrigger', ['deleteDistFolder'], function() {
 	gulp.start('usemin');
 });
 
+// gulp.task('usemin', ['styles', 'scripts'], function() {
+// 	return gulp
+// 		.src('./app/index.html')
+// 		.pipe(
+// 			usemin({
+// 				css: [rev, cssnano],
+// 				js: [rev, uglify]
+// 				// Tell usemin what to do with the css and js files, in the array provide the functions or filters that you want to perform.
+//
+// 				// In the css property, in the array the first item is for revisioning the file, the second for compression.
+// 				// Include return so that gulp is aware when the function completes.
+// 			})
+// 		)
+// 		.pipe(gulp.dest('./docs'));
+// });
+
 gulp.task('usemin', ['styles', 'scripts'], function() {
 	return gulp
 		.src('./app/index.html')
 		.pipe(
 			usemin({
-				css: [rev, cssnano],
-				js: [rev, uglify]
-				// Tell usemin what to do with the css and js files, in the array provide the functions or filters that you want to perform.
-
-				// In the css property, in the array the first item is for revisioning the file, the second for compression.
-				// Include return so that gulp is aware when the function completes.
+				css: [
+					function() {
+						return rev();
+					},
+					function() {
+						return cssnano();
+					}
+				],
+				js: [
+					function() {
+						return rev();
+					},
+					function() {
+						return uglify();
+					}
+				]
 			})
 		)
 		.pipe(gulp.dest('./docs'));
