@@ -104,20 +104,3 @@ gulp.task('build', [
 	'optimizeImages',
 	'useminTrigger'
 ]);
-
-// css: [
-//   function() {
-//     return rev();
-//   },
-//   function() {
-//     return cssnano;
-//   }
-// ],
-// js: [
-//   function() {
-//     return rev();
-//   },
-//   function() {
-//     return uglify();
-//   }
-// ]
